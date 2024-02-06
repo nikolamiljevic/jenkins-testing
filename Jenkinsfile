@@ -8,6 +8,20 @@ pipeline {
                 echo "Hello"
             }
         }
+    }
+	
+	stages {
+        stage('Test') {
+            when {
+                branch 'test'
+            }
+            steps {
+                sh ''' cat Readme.md'''
+            }
+        }
 
     }
+	
+	
+	
 }
