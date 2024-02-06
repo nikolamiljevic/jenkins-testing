@@ -8,10 +8,8 @@ pipeline {
                 echo "Hello"
             }
         }
-    }
-	
-	stages {
-        stage('Test') {
+		
+		stage('Test2') {
             when {
                 branch 'test'
             }
@@ -19,7 +17,6 @@ pipeline {
                 sh ''' cat Readme.md'''
             }
         }
-
     }
 	
 	
