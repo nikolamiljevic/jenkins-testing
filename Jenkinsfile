@@ -3,25 +3,11 @@ pipeline {
 
     stages {
         stage('Test') {
-            when {
-                branch 'test'
-            }
+            
             steps {
-                script {
-                    build job: 'testing-test', wait: false
-                }
+                echo "Hello"
             }
         }
 
-        stage('Stage') {
-            when {
-                branch 'stage'
-            }
-            steps {
-                script {
-                    build job: 'testing-stage', wait: false
-                }
-            }
-        }
     }
 }
